@@ -19,12 +19,17 @@ app.use(express.json());
 
 const config = {
   authRequired: false,
-  auth0Logout: true
+  auth0Logout: true,
+  authorizationParams: {
+    response_type: 'code',
+    scope: 'openid profile email offline_access read:test_scope create:tools',
+    audience: 'https://onboarding'
+  },
 };
 
 const port = process.env.PORT || 3000;
 if (!config.baseURL && !process.env.BASE_URL && process.env.PORT && process.env.NODE_ENV !== 'production') {
-  config.baseURL = `http://localhost:${port}`;
+  config.baseURL = `https://localhost`;
 }
 
 app.use(auth(config));

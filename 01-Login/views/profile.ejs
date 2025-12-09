@@ -1,9 +1,9 @@
 <%- include('partials/header') -%>
 
   <h1 class="text-4xl mb-4">Welcome <%= user.nickname %></h1>
-
-  <% if (user.picture) { %>
-    <img class="block py-3" src="<%= user.picture %>" width="300">
+  
+  <% if (locals.user.picture) { %>
+    <img class="block py-3" src="<%= user.picture %>" width="200">
   <% } %>
   
   <p class="py-3">

@@ -1,0 +1,9 @@
+<%- include('partials/header') -%>
+
+  <h1 class="text-4xl mb-4">Welcome <%= user.nickname %></h1>
+
+  This is a protected resource and requires a valid access token to access.
+
+  <pre class="block bg-gray-300 p-4 text-sm overflow-scroll"><%= accessToken %></pre>
+
+<%- include('partials/footer') -%>
