@@ -93,3 +93,5 @@ typings/
 # Local certificates and keys
 
 *.pem
+.vercel
+.env*.local

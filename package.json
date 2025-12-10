@@ -2,7 +2,8 @@
   "name": "auth0-express-webapp-sample",
   "scripts": {
     "dev": "nodemon server.js",
-    "debug": "nodemon --inspect server.js"
+    "debug": "nodemon --inspect server.js",
+    "build": "npm run"
   },
   "dependencies": {
     "debug": "~3.2.7",

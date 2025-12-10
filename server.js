@@ -10,7 +10,7 @@ dotenv.load();
 
 const app = express();
 
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'public/views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
@@ -58,7 +58,11 @@ app.use(function (err, req, res, next) {
   });
 });
 
-http.createServer(app)
-  .listen(port, () => {
-    console.log(`Listening on ${config.baseURL}`);
-  });
+// http.createServer(app)
+//   .listen(port, () => {
+//     console.log(`Listening on ${config.baseURL}`);
+//   });
+
+app.listen(port, () => {
+  console.log(`Listening on ${config.baseURL}`);
+})
